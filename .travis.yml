@@ -6,7 +6,7 @@ before_install:
   - docker build -t geneblandjr/react-test -f ./client/Dockerfile.dev ./client 
 
 script:
-  - docker run genebland/react-test npm test
+  - docker run geneblandjr/react-test npm test
 
 after_success:
   - docker build -t geneblandjr/multi-client ./client 
